@@ -1,12 +1,12 @@
 {
-  "name": "scaffold-app",
+  "name": "order-populator",
   "version": "0.1.4",
   "watch": {
     "dev": "src"
   },
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
+    "dev": "nodemon src/index.js --watch src --watch ../scaffold/src",
     "ci-package": "docker build --tag gcr.io/ct-sales-207211/${npm_package_name}:latest .",
     "ci-push": "docker push gcr.io/ct-sales-207211/${npm_package_name}:latest",
     "ci-deploy": "helm upgrade ${npm_package_name} helm-chart --install --recreate-pods --wait --force --namespace scaffold --set image.tag=latest",
@@ -21,7 +21,7 @@
   "license": "MIT",
   "devDependencies": {},
   "dependencies": {
-    "@dlillyatx/scaffold": "^0.1.5",
+    "@dlillyatx/scaffold": "^1.0.1",
     "@google-cloud/pubsub": "^1.6.0",
     "lodash": "^4.17.15"
   }
