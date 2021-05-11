@@ -23,6 +23,6 @@
   "dependencies": {
     "@dlillyatx/scaffold": "^1.0.1",
     "@google-cloud/pubsub": "^1.6.0",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.21"
   }
 }
